@@ -46,4 +46,6 @@ vim.opt.clipboard:append({ 'unnamedplus' })
 
 -- Theme configuration
 vim.o.background = 'dark'
+vim.opt.termguicolors = true
 vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme melange]])
