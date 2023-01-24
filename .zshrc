@@ -134,3 +134,8 @@ eval
 
 # dotfiles tool
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# pnpm
+export PNPM_HOME="/Users/juanprq/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

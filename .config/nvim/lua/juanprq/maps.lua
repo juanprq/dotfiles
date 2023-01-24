@@ -35,3 +35,7 @@ keymap.set('', '<C-j>', '<C-w>j')
 keymap.set('', '<C-k>', '<C-w>k')
 keymap.set('', '<C-h>', '<C-w>h')
 keymap.set('', '<C-l>', '<C-w>l')
+
+-- Scroll without moving the cursor from the middle
+keymap.set('n', '<C-d>', '<C-d>zz')
+keymap.set('n', '<C-u>', '<C-u>zz')

@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  melange = {
+    loaded = true,
+    path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/melange",
+    url = "https://github.com/savq/melange"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
