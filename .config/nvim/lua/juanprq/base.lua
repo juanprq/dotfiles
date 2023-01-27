@@ -50,3 +50,5 @@ vim.o.background = 'dark'
 vim.opt.termguicolors = true
 vim.cmd([[colorscheme gruvbox]])
 -- vim.cmd([[colorscheme melange]])
+--
+vim.g.loaded_perl_provider = 0

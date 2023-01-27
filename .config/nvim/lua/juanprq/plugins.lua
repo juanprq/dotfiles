@@ -7,6 +7,8 @@ end
 vim.cmd 'packadd packer.nvim'
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'ThePrimeagen/vim-be-good'
+  use 'karb94/neoscroll.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'windwp/nvim-autopairs'

@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/melange",
     url = "https://github.com/savq/melange"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -213,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/juanprq/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

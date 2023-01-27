@@ -10,7 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/juanprq/.oh-my-zsh"
-export TERM=xterm-256color
+export TERM="xterm-256color"
 export CLICOLOR=1
 
 # Set name of the theme to load --- if set to "random", it will
@@ -80,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git nvm npm zsh-syntax-highlighting zsh-autosuggestions vi-mode
+  git nvm npm zsh-syntax-highlighting zsh-autosuggestions vi-mode asdf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -139,3 +139,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PNPM_HOME="/Users/juanprq/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# asdf configuration
+. "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash"
+. ~/.asdf/plugins/java/set-java-home.zsh
