@@ -1,51 +1,57 @@
-local status, packer = pcall(require, 'packer')
-if (not status) then
-  print 'Packer is not installed'
-  return
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable',
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.cmd 'packadd packer.nvim'
-packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'ThePrimeagen/vim-be-good'
-  use 'karb94/neoscroll.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
-  use 'ellisonleao/gruvbox.nvim'
-  use 'savq/melange'
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'onsails/lspkind-nvim'
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
-  use 'glepnir/lspsaga.nvim'
-  use 'L3MON4D3/LuaSnip'
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'akinsho/nvim-bufferline.lua'
-  use 'christoomey/vim-tmux-navigator'
-  use 'lewis6991/gitsigns.nvim'
-  use 'numToStr/Comment.nvim'
-  use 'folke/which-key.nvim'
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'kylechui/nvim-surround'
-  use {
+local lazy = require('lazy');
+lazy.setup({
+  'ThePrimeagen/vim-be-good',
+  'karb94/neoscroll.nvim',
+  'nvim-lua/plenary.nvim',
+  'kyazdani42/nvim-web-devicons',
+  'windwp/nvim-autopairs',
+  'windwp/nvim-ts-autotag',
+  'ellisonleao/gruvbox.nvim',
+  'savq/melange',
+  'neovim/nvim-lspconfig',
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-buffer',
+  'onsails/lspkind-nvim',
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  'glepnir/lspsaga.nvim',
+  'L3MON4D3/LuaSnip',
+  'jose-elias-alvarez/null-ls.nvim',
+  'MunifTanjim/prettier.nvim',
+  'nvim-telescope/telescope.nvim',
+  'nvim-telescope/telescope-file-browser.nvim',
+  'akinsho/nvim-bufferline.lua',
+  'christoomey/vim-tmux-navigator',
+  'lewis6991/gitsigns.nvim',
+  'numToStr/Comment.nvim',
+  'folke/which-key.nvim',
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  'kylechui/nvim-surround',
+  {
     'kyazdani42/nvim-tree.lua',
-    requires = { 'kyazdani42/nvim-web-devicons' },
+    dependencies = { 'kyazdani42/nvim-web-devicons' },
     tag = 'nightly',
-  }
-  use {
+  },
+  {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-  use {
+    dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
+  },
+  {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-end)
+    build = ':TSUpdate'
+  },
+})
