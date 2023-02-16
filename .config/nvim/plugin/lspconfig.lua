@@ -56,23 +56,25 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
-nvim_lsp.flow.setup {
+nvim_lsp.flow.setup({
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
-nvim_lsp.tsserver.setup {
+
+-- I prefer to have this, but in order to work with flow I need to stop it
+-- nvim_lsp.tsserver.setup {
+--   on_attach = on_attach,
+--   filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript' },
+--   cmd = { 'typescript-language-server', '--stdio' },
+--   capabilities = capabilities
+-- }
+
+nvim_lsp.sourcekit.setup({
   on_attach = on_attach,
-  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript' },
-  cmd = { 'typescript-language-server', '--stdio' },
-  capabilities = capabilities
-}
+})
 
-nvim_lsp.sourcekit.setup {
-  on_attach = on_attach,
-}
-
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup({
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -88,17 +90,18 @@ nvim_lsp.sumneko_lua.setup {
       },
     },
   },
-}
+})
 
-nvim_lsp.tailwindcss.setup {}
+nvim_lsp.tailwindcss.setup({})
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true,
-}
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "●" },
+    severity_sort = true,
+  }
 )
 
 -- Diagnostic symbols in the sign column (gutter)

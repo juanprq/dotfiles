@@ -10,7 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/juanprq/.oh-my-zsh"
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export CLICOLOR=1
 
 # Set name of the theme to load --- if set to "random", it will

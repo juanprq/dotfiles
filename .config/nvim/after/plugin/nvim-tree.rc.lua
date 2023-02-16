@@ -12,4 +12,4 @@ nvimTree.setup({
 })
 
 vim.keymap.set('', '<leader>tt', ':NvimTreeToggle<cr>')
-vim.keymap.set('', '<leader>tf', ':NvimTreeFindFileToggle<cr>')
+vim.keymap.set('', '<leader>tf', ':NvimTreeFindFile<cr>')

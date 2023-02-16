@@ -1,14 +1,16 @@
 local status, saga = pcall(require, 'lspsaga')
 if (not status) then return end
 
-saga.setup {
-  server_filetype_map = {
-    typescript = 'typescript'
-  }
-}
+-- I disabled this because of flow projects
+-- saga.setup {
+--   server_filetype_map = {
+--     typescript = 'typescript'
+--   }
+-- }
+saga.setup()
 
 local opts = { noremap = true, silent = true }
--- TODO: Maybe I need to remap this to understand it better
+
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)

@@ -3,4 +3,4 @@ if (not status) then
   return
 end
 
-gitsigns.setup {}
+gitsigns.setup({})

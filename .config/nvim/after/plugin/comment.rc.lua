@@ -3,6 +3,4 @@ if (not status) then
   return
 end
 
-print('loading comment')
-
 comment.setup()
