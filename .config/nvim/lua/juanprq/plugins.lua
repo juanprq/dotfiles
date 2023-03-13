@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy = require('lazy');
 lazy.setup({
+  'wakatime/vim-wakatime',
   'ThePrimeagen/vim-be-good',
   'karb94/neoscroll.nvim',
   'nvim-lua/plenary.nvim',
