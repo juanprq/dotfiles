@@ -2,11 +2,11 @@ local status, saga = pcall(require, 'lspsaga')
 if (not status) then return end
 
 -- I disabled this because of flow projects
--- saga.setup {
---   server_filetype_map = {
---     typescript = 'typescript'
---   }
--- }
+saga.setup {
+  server_filetype_map = {
+    typescript = 'typescript'
+  }
+}
 saga.setup()
 
 local opts = { noremap = true, silent = true }

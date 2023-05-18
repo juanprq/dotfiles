@@ -42,6 +42,7 @@ lazy.setup({
   'folke/which-key.nvim',
   'nvim-treesitter/nvim-treesitter-textobjects',
   'kylechui/nvim-surround',
+  'folke/trouble.nvim',
   {
     'kyazdani42/nvim-tree.lua',
     dependencies = { 'kyazdani42/nvim-web-devicons' },
