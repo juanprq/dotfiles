@@ -3,9 +3,9 @@ local keymap = vim.keymap
 -- Set the leader key
 vim.g.mapleader = ' '
 
-keymap.set('n', 'x', '"_x')
+keymap.set('n', 'x', '"_x') -- When you cut chars with x, don't send it to a register
 keymap.set('n', '<esc>', '<cmd> noh <CR>')
-keymap.set('n', 'tt', ':tabnew <CR>')
+keymap.set('n', 'tt', ':tabnew <CR>') -- Create a new tab with tt
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')

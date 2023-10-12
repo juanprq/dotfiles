@@ -1,12 +1,15 @@
 local status, nvimTree = pcall(require, 'nvim-tree');
+if (not status) then return end
 
-if (not status) then
-  return
-end
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 nvimTree.setup({
-  open_on_tab = true,
+  open_on_tab = false,
   git = { ignore = false },
+  view = {
+    adaptive_size = true
+  },
 })
 
 vim.keymap.set('', '<leader>tt', ':NvimTreeToggle<cr>')

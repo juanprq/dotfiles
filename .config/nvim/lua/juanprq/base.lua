@@ -37,8 +37,8 @@ vim.opt.showmatch = true
 vim.opt.guifont = 'FiraCode Nerd Font:h18'
 
 -- Undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
+-- vim.cmd([[let &t_Cs = "\e[4:3m"]])
+-- vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ 'r' })
@@ -46,7 +46,7 @@ vim.opt.formatoptions:append({ 'r' })
 -- Enable copy from the clipboard
 vim.opt.clipboard:append({ 'unnamedplus' })
 
--- Theme configuration
-vim.o.background = 'dark'
-vim.opt.termguicolors = true
+-- Theme configuration TODO: I don't know what are the purpose of these
+-- vim.opt.background = 'dark'
+-- vim.opt.termguicolors = true
 vim.g.loaded_perl_provider = 0
