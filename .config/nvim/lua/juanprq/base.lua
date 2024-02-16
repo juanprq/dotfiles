@@ -46,7 +46,21 @@ vim.opt.formatoptions:append({ 'r' })
 -- Enable copy from the clipboard
 vim.opt.clipboard:append({ 'unnamedplus' })
 
--- Theme configuration TODO: I don't know what are the purpose of these
--- vim.opt.background = 'dark'
--- vim.opt.termguicolors = true
 vim.g.loaded_perl_provider = 0
+
+-- Lazy configuration
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+local lazy = require('lazy')
+lazy.setup('juanprq/plugins')
