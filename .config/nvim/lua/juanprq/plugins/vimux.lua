@@ -1,3 +1,3 @@
 return {
-  'preservim/vimux',
+  "preservim/vimux",
 }

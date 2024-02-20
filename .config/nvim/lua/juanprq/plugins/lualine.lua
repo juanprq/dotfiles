@@ -1,17 +1,17 @@
 return {
-  'nvim-lualine/lualine.nvim',
+  "nvim-lualine/lualine.nvim",
   opts = {
     options = {
       icons_enabled = true,
-      theme = 'catppuccin',
+      theme = "catppuccin",
     },
     sections = {
       lualine_a = {
         {
-          'filename',
+          "filename",
           path = 1,
-        }
-      }
-    }
+        },
+      },
+    },
   },
 }

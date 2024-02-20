@@ -1,4 +1,4 @@
 return {
-  'windwp/nvim-autopairs',
-  opts = { 'TelescopePrompt', 'vim' }
+  "windwp/nvim-autopairs",
+  opts = { "TelescopePrompt", "vim" },
 }

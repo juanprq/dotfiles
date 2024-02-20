@@ -1,7 +1,7 @@
 return {
-  'nvimtools/none-ls.nvim',
+  "nvimtools/none-ls.nvim",
   config = function()
-    local null_ls = require('null-ls');
+    local null_ls = require("null-ls")
     null_ls.setup({
       sources = {
         null_ls.builtins.formatting.stylua,
@@ -13,6 +13,6 @@ return {
     })
 
     vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
-    vim.keymap.set('n', '<leader>p', ':Format<cr>')
-  end
+    vim.keymap.set("n", "<leader>p", ":Format<cr>")
+  end,
 }
