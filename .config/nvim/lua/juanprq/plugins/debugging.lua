@@ -9,7 +9,7 @@ return {
 		local dapjs = require("dap-vscode-js")
 		local dap = require("dap")
 		local dapui = require("dapui")
-		dapui.setup()
+		-- dapui.setup()
 
 		dapjs.setup({
 			debugger_path = os.getenv("HOME") .. "/projects/vscode-js-debug",
