@@ -19,10 +19,16 @@ return {
     -- Snippets
     { "L3MON4D3/LuaSnip" },
     { "rafamadriz/friendly-snippets" },
+
+    -- IA
+    { "supermaven-inc/supermaven-nvim" },
   },
   config = function()
+    local supermaven = require("supermaven-nvim")
     local lsp = require("lsp-zero")
     require("lspconfig/configs")
+
+    supermaven.setup({})
 
     lsp.on_attach(function(client, bufnr)
       local opts = { buffer = bufnr, remap = false }
@@ -112,6 +118,7 @@ return {
         { name = "path" },
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
+        { name = "supermaven" },
         { name = "buffer",  keyword_length = 3 },
         { name = "luasnip", keyword_length = 2 },
       },
