@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Juan Pablo
+	email = juan.ramirez.q@gmail.com
+[core]
+	editor = nvim
